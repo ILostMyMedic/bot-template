@@ -1,0 +1,41 @@
+import {
+	PermissionFlagsBits,
+	GuildMember,
+	GuildChannelResolvable,
+} from "discord.js";
+
+type PermissionName = keyof typeof DiscordPermissions;
+
+export const DiscordPermissions = {
+	ADMINISTRATOR: PermissionFlagsBits.Administrator,
+	VIEW_AUDIT_LOG: PermissionFlagsBits.ViewAuditLog,
+	MANAGE_GUILD: PermissionFlagsBits.ManageGuild,
+	MANAGE_ROLES: PermissionFlagsBits.ManageRoles,
+	MANAGE_CHANNELS: PermissionFlagsBits.ManageChannels,
+	KICK_MEMBERS: PermissionFlagsBits.KickMembers,
+	BAN_MEMBERS: PermissionFlagsBits.BanMembers,
+	CREATE_INSTANT_INVITE: PermissionFlagsBits.CreateInstantInvite,
+	CHANGE_NICKNAME: PermissionFlagsBits.ChangeNickname,
+	MANAGE_NICKNAMES: PermissionFlagsBits.ManageNicknames,
+	MANAGE_EMOJIS_AND_STICKERS: PermissionFlagsBits.ManageEmojisAndStickers,
+	MANAGE_WEBHOOKS: PermissionFlagsBits.ManageWebhooks,
+	VIEW_CHANNEL: PermissionFlagsBits.ViewChannel,
+	SEND_MESSAGES: PermissionFlagsBits.SendMessages,
+	MANAGE_MESSAGES: PermissionFlagsBits.ManageMessages,
+	EMBED_LINKS: PermissionFlagsBits.EmbedLinks,
+	ATTACH_FILES: PermissionFlagsBits.AttachFiles,
+	READ_MESSAGE_HISTORY: PermissionFlagsBits.ReadMessageHistory,
+	MENTION_EVERYONE: PermissionFlagsBits.MentionEveryone,
+	USE_EXTERNAL_EMOJIS: PermissionFlagsBits.UseExternalEmojis,
+	ADD_REACTIONS: PermissionFlagsBits.AddReactions,
+	CONNECT: PermissionFlagsBits.Connect,
+	SPEAK: PermissionFlagsBits.Speak,
+	STREAM: PermissionFlagsBits.Stream,
+	MUTE_MEMBERS: PermissionFlagsBits.MuteMembers,
+	DEAFEN_MEMBERS: PermissionFlagsBits.DeafenMembers,
+	MOVE_MEMBERS: PermissionFlagsBits.MoveMembers,
+	USE_VAD: PermissionFlagsBits.UseVAD,
+	PRIORITY_SPEAKER: PermissionFlagsBits.PrioritySpeaker,
+	REQUEST_TO_SPEAK: PermissionFlagsBits.RequestToSpeak,
+	USE_APPLICATION_COMMANDS: PermissionFlagsBits.UseApplicationCommands,
+};
