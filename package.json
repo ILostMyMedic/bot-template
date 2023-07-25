@@ -1,0 +1,39 @@
+{
+	"name": "coffeebot",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.ts",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start:dev": "npx nodemon",
+		"build": "rimraf ./build && tsc",
+		"start": "npm run build && node build/index.js",
+		"prettier": "prettier --check ./src/*.ts",
+		"format:write": "prettier --write ./src/*.ts",
+		"lint:check": "eslint ./src/*.ts",
+		"lint:fix": "eslint --fix ./src/*.ts"
+	},
+	"author": "ILostMyMedic",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^20.4.4",
+		"@typescript-eslint/eslint-plugin": "^6.2.0",
+		"@typescript-eslint/parser": "^6.2.0",
+		"eslint": "^8.45.0",
+		"eslint-config-prettier": "^8.8.0",
+		"nodemon": "^3.0.1",
+		"prettier": "^3.0.0",
+		"rimraf": "^5.0.1",
+		"ts-node": "^10.9.1",
+		"typescript": "^5.1.6"
+	},
+	"engines": {
+		"node": ">=18.0.0"
+	},
+	"dependencies": {
+		"dotenv": "^16.3.1",
+		"mongoose": "^7.4.1",
+		"winston": "^3.10.0",
+		"winston-daily-rotate-file": "^4.7.1"
+	}
+}
