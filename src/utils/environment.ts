@@ -2,7 +2,10 @@ import dotenv from 'dotenv';
 dotenv.config();
 import { IConnection } from '../interfaces/database.interface';
 
-
+const cert =
+	process.env.NODE_ENV === "production"
+		? "./src/certs/MongoDB_PROD_CERT.pem"
+		: "./src/certs/MongoDB_DEV_CERT.pem";
 
 export default {
 	appName: process.env.APP_NAME || "text application",
@@ -23,7 +26,8 @@ export default {
 		options: {
 			useNewUrlParser: true,
 			useUnifiedTopology: true,
-		},
+			tlsCertificateKeyFile: cert
+		}
 	} as IConnection,
 	jwt: {
 		secret: process.env.JWT || "secret",

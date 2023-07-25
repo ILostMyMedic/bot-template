@@ -1,8 +1,8 @@
 import { ConnectOptions, SchemaOptions } from "mongoose";
 
 export interface IConnection extends ConnectOptions {
-    uri: string;
-    options: ConnectOptions;
+	uri: string;
+	options: ConnectOptions;
 }
 
 export interface ISchema extends SchemaOptions {

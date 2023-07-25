@@ -3,4 +3,4 @@
 /build
 /.env
 /dist
-/certs
+/src/certs
