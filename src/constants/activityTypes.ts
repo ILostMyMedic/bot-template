@@ -1,6 +1,6 @@
 import { ActivityType } from "discord.js";
 
-type ActivityTypeName =
+export type ActivityTypeName =
 	| "PLAYING"
 	| "STREAMING"
 	| "LISTENING"

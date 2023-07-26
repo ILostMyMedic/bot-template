@@ -34,4 +34,5 @@ export default {
 	},
 	token: process.env.TOKEN || "token",
 	platform: process.env.PLATFORM || "Discord",
+	ApiKey: process.env.API_KEY || "API_KEY",
 };

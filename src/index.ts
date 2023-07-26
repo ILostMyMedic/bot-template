@@ -13,7 +13,11 @@ const start = async () => {
 
         // start applications
         Client.getInstance().connect();
-        Server.getInstance().connect();
+        const client = Client.getInstance().getClient();
+
+        const server = Server.getInstance(client).connect();
+
+
     } catch (error) {
         logger.error(error);
         process.exit(1);

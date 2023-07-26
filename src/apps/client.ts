@@ -50,7 +50,7 @@ export default class DiscordClient {
 
     public async connect(): Promise<void> {
         try {
-            await this.client.login(environment.token);
+            await this.client.login(environment.token)
             logger.info("Discord client connected");
         } catch (error) {
             logger.error(error);
